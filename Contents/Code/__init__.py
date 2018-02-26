@@ -12,7 +12,7 @@ class CollectionAgent(Agent.Movies):
   name = 'Collection Agent (Movies)'
   languages = [Locale.Language.NoLanguage]
   primary_provider = False
-  contributes_to = ['com.plexapp.agents.none', 'com.plexapp.agents.imdb', 'com.plexapp.agents.themoviedb']
+  contributes_to = ['com.plexapp.agents.none', 'com.plexapp.agents.imdb', 'com.plexapp.agents.themoviedb', 'com.plexapp.agents.youtube', 'com.plexapp.agents.staticmedia']
 
   def search(self, results, media, lang, manual=False):
     if media.primary_agent == 'com.plexapp.agents.none':
@@ -25,8 +25,8 @@ class CollectionAgent(Agent.Movies):
     path = os.path.dirname(part.file)
     (root_file, ext) = os.path.splitext(os.path.basename(part.file))
     
-    if os.path.isfile(os.path.join(path, COLLECTION_FLAG):
+    if os.path.isfile(os.path.join(path, COLLECTION_FLAG)):
       collection = os.path.basename(path)
-      metadata.collection.clear()
-      metadata.collection.add(collection)
+      metadata.collections.clear()
+      metadata.collections.add(collection)
       Log('[COLLECTION] Collection set to %s for %s' % (collection, root_file))
