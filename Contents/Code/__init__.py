@@ -30,3 +30,6 @@ class CollectionAgent(Agent.Movies):
       metadata.collections.clear()
       metadata.collections.add(collection)
       Log('[COLLECTION] Collection set to %s for %s' % (collection, root_file))
+    else:
+      metadata.collections.clear()
+      Log('[COLLECTION] Collection reset for %s' % (root_file))
