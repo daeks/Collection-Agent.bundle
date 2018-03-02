@@ -4,6 +4,8 @@
 <dict>
   <key>CFBundleIdentifier</key>
   <string>com.plexapp.agents.collection</string>
+  <key>PlexAgentAttributionText</key>
+  <string>This agent creates a collection with the name of the parent folder if .plexcollection file exists within the folder&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;http://forums.plex.tv/discussion/310216/rel-collection-metadata-agent&quot;&gt;Plex Forum Support&lt;/a&gt;</string>
   <key>PlexFrameworkVersion</key>
   <string>2</string>
   <key>PlexPluginClass</key>

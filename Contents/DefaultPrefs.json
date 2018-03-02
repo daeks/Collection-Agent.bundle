@@ -1,0 +1,14 @@
+[
+  {
+    "id":"clear_collections",
+    "label":"Clear other collections if .plexcollection exist",
+    "type":"bool",
+    "default":"true"
+  },
+  {
+    "id":"reset_collections",
+    "label":"Clear all collections if .plexcollection does not exist",
+    "type":"bool",
+    "default":"true"
+  }
+]

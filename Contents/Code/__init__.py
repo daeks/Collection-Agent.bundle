@@ -27,9 +27,11 @@ class CollectionAgent(Agent.Movies):
     
     if os.path.isfile(os.path.join(path, COLLECTION_FLAG)):
       collection = os.path.basename(path)
-      metadata.collections.clear()
+      if Prefs['clear_collections']:
+        metadata.collections.clear()
       metadata.collections.add(collection)
       Log('[COLLECTION] Collection set to %s for %s' % (collection, root_file))
     else:
-      metadata.collections.clear()
-      Log('[COLLECTION] Collection reset for %s' % (root_file))
+      if Prefs['reset_collections']:
+        metadata.collections.clear()
+        Log('[COLLECTION] Collection reset for %s' % (root_file))
