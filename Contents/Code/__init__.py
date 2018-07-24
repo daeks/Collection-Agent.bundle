@@ -16,7 +16,7 @@ class CollectionAgent(Agent.Movies):
 
   def search(self, results, media, lang, manual=False):
     if media.primary_agent == 'com.plexapp.agents.none':
-      results.Append(MetadataSearchResult(id = media.id, score = 100))
+      results.Append(MetadataSearchResult(id = media.id, name = media.name, score = 100))
     else:
       results.Append(MetadataSearchResult(id = media.primary_metadata.id, score = 100))
 
